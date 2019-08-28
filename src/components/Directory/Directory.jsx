@@ -42,14 +42,14 @@ const Directory = () => {
     }
   ];
   
-
+// eslint-disable-next-line
   const [Sections, setSections] = useState(sections);
 
   return (
     <div className="directory-menu">
       {
         Sections.map(section => (
-          <MenuItem {...section} />
+          <MenuItem key={section.id} {...section} />
         ))
       }
     </div>
